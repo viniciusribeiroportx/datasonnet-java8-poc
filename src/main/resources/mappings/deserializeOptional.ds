@@ -1,0 +1,9 @@
+/** DataSonnet
+version=2.5
+input payload application/x-java-object; FindAndRegisterModules=true
+*/
+{
+  name: payload.name,
+  age: payload.age,
+  pet: if std.objectHas(payload, "pet") then payload.pet,
+}
